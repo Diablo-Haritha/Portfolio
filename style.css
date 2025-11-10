@@ -62,33 +62,45 @@ nav ul {
 }
 
 nav a {
+  position: relative;
   color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  transition: 0.2s;
+  transition: color 0.2s;
   padding: 0 25px;
 }
 
-nav a:hover,
-.active {
-  color: #4acfee;
-  text-decoration: underline;
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #8a2be2;
+  transition: width 0.3s ease;
 }
 
+nav a:hover {
+  color: #8a2be2;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 .section {
   min-height: 90vh;
   margin-bottom: 5vh;
   padding: 140px 10% 50px;  /* NEW: Increased top padding */
   scroll-margin-top: 80px;  /* NEW: Fixes anchor scroll coverage */
   color: white;
-  
   flex-direction: column;
   justify-content: center;
   background-color: #4ad0ee1b;
   backdrop-filter: blur(10px);
   border-radius: 50px;
-  box-shadow: 5px 5px 20px 1px #4acfee;
+  box-shadow: 5px 5px 20px 1px #8a2be2;
   width: 95%;
   max-width: 1300px;
   margin: 0 auto 5vh;
@@ -98,7 +110,7 @@ nav a:hover,
   font-size: 40px;
   margin-bottom: 30px;
   text-align: center;
-  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #8a2be2, #5bbdff, #4acfee);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -120,7 +132,7 @@ nav a:hover,
   margin-top: 20px;
   font-size: 30px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #8a2be2, #5bbdff, #4acfee);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -148,10 +160,10 @@ nav a:hover,
 .btn {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #4acfee;
-  border: 2px solid #4acfee;
+  background-color: #8a2be2;
+  border: 2px solid #8a2be2;
   border-radius: 40px;
-  box-shadow: 0 0 10px #4acfee;
+  box-shadow: 0 0 10px #8a2be2;
   font-size: 16px;
   font-weight: 900;
   color: #0e1217;
@@ -164,7 +176,7 @@ nav a:hover,
 .btn:hover {
   background-color: transparent;
   box-shadow: none;
-  color: #4acfee;
+  color: #8a2be2;
 }
 
 .ul-icons {
@@ -180,19 +192,19 @@ nav a:hover,
 .ul-icons a {
   display: inline-flex;
   padding: 8px;
-  border: 2px solid #4acfee;
+  border: 2px solid #8a2be2;
   border-radius: 50%;
   font-size: 20px;
-  color: #4acfee;
+  color: #8a2be2;
   text-decoration: none;
   margin: 0 7px;
   transition: 0.3s;
 }
 
 .ul-icons a:hover {
-  background: #4acfee;
+  background: #8a2be2;
   color: #0e1217;
-  box-shadow: 0 0 10px #4acfee;
+  box-shadow: 0 0 10px #8a2be2;
 }
 
 .hero-img {
@@ -203,12 +215,12 @@ nav a:hover,
   display: flex;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 0 10px #4eddfd;
+  box-shadow: 0 0 10px #8a2be2;
   transition: 0.5s;
 }
 
 .hero-img:hover {
-  box-shadow: 0 0 25px #4acfee;
+  box-shadow: 0 0 25px #8a2be2;
 }
 
 .hero-img img {
@@ -237,7 +249,7 @@ nav a:hover,
 .info-card h1 {
   font-size: 55px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+  background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #8a2be2, #5bbdff, #4acfee);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -273,7 +285,7 @@ nav a:hover,
   padding: 20px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 0 10px #4acfee;
+  box-shadow: 0 0 10px #8a2be2;
   transition: 0.3s;
 }
 
@@ -332,7 +344,7 @@ nav a:hover,
 .contact-form input,
 .contact-form textarea {
   padding: 15px;
-  border: 2px solid #4acfee;
+  border: 2px solid #8a2be2;
   border-radius: 10px;
   background: transparent;
   color: white;
@@ -391,4 +403,48 @@ nav a:hover,
   .section h2 {
     font-size: 30px;
   }
+}
+
+/* Fixed 3D Spline viewer in bottom-right */
+.spline-container {
+  position: fixed;
+  bottom: -60px;           /* distance from bottom */
+  right: -30px;            /* distance from right */
+  width: 350px;           /* desktop size - adjust as needed */
+  height: 350px;
+  z-index: 9999;          /* keep above other content */
+  pointer-events: none;   /* allow clicks to pass through (remove to allow interaction) */
+  transform: translateZ(0); /* GPU accelerate */
+  transition: opacity 300ms ease, transform 300ms ease;
+  opacity: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Viewer fills the container */
+.spline-container spline-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Optional: make smaller on tablets/phones */
+@media (max-width: 900px) {
+  .spline-container {
+    width: 260px;
+    height: 260px;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
+/* Hide completely on very small screens (optional) */
+@media (max-width: 480px) {
+  .spline-container { display: none; }
+}
+
+/* If you want the model to be clickable/interactive, add this class via JS or directly remove pointer-events:none */
+.spline-container.interactive {
+  pointer-events: auto;
 }

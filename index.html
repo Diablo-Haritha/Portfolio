@@ -6,8 +6,12 @@
   <title>Haritha Waththegedara - Portfolio</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
+  <!-- Spline viewer (3D) -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+  
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <video autoplay loop muted plays-inline class="back-vid">
@@ -15,7 +19,7 @@
   </video>
 
   <nav>
-    <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Diablo</span>-Haritha</h1>
+    <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #8a2be2;">Diablo</span>-Haritha</h1>
     <ul>
       <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></li>
       <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></li>
@@ -30,7 +34,7 @@
       <div class="hero-info">
         <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Haritha Waththegedara</h1>
         <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">IT Undergraduate • Full-stack Developer</h2>
-        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Passionate about web development, software engineering, and creating innovative solutions. Currently pursuing a degree in Information Technology at SLIIT City University with a focus on full-stack development. I enjoy applying my skills to real-world problems through hands-on projects and collaborating with peers.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Passionate about web development, software engineering, and creating innovative solutions. Currently pursuing a degree in Information Technology at SLIIT City University with a focus on full-stack development.</p>
         <div class="Buttons">
           <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Hire me</button>
           <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Download CV</button>
@@ -66,6 +70,14 @@
       </div>
     </div>
   </section>
+
+  <!-- Spline viewer (place before the closing </body>) -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+
+<div class="spline-container" aria-hidden="false">
+  <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
+</div>
+
 
 <section id="about" class="section">
     <h2 data-aos="fade-up" data-aos-duration="1000">About Me</h2>
