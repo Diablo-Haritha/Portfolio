@@ -26,6 +26,7 @@ body {
   height: auto;
   overflow-y: auto;
   padding: 0;
+  background: var(--background);
 }
 .back-vid {
   position: fixed;
