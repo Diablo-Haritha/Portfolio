@@ -4,180 +4,487 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Haritha Waththegedara - Portfolio</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="style.css">
-  <!-- Spline viewer (3D) -->
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
-  
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <video autoplay loop muted plays-inline class="back-vid">
     <source src="images/galaxy.mp4" type="video/mp4">
   </video>
-
+ 
   <nav>
-    <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #8a2be2;">Diablo</span>-Haritha</h1>
-    <ul>
-      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></li>
-      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></li>
-      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#projects">Projects</a></li>
-      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#skills">Skills</a></li>
-      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="logo">Professional <span>Skills</span></div>
+      <div class="nav-container">
+          <div class="links">
+            <a href="#home">Home</a>
+            <a href="#toc">Contents</a>
+            <a href="#lectures">Lectures</a>
+            <a href="#footer">Contact</a>
+          </div>
+      </div>
+    <i class="fa-solid fa-bars hamburg" onclick="toggleMenu()"></i>
+      <div class="dropdown" id="dropdown">
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#toc">Contents</a>
+            <a href="#lectures">Lectures</a>
+            <a href="#footer">Contact</a>
+            <i class="fa-solid fa-xmark cancel" onclick="toggleMenu()"></i>
+        </div>    
+      </div>
   </nav>
-
-  <section id="home" class="section">
-    <div class="hero">
-      <div class="hero-info">
-        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Haritha Waththegedara</h1>
-        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">IT Undergraduate • Full-stack Developer</h2>
-        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Passionate about web development, software engineering, and creating innovative solutions. Currently pursuing a degree in Information Technology at SLIIT City University with a focus on full-stack development.</p>
-        <div class="Buttons">
-          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Hire me</button>
-          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Download CV</button>
-          <ul class="ul-icons">
-            <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
-            <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i class="fa-brands fa-whatsapp"></i></a></li>
-            <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-facebook-circle'></i></a></li>
-          </ul>
+ <!-- Home Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="content">
+                <h1>Hey I'm <span>M.C.H.Waththegedara</span></h1>
+                <div class="typewriter">I'm a <span class="typewriter-text"></span><label>|</label></div>
+                <p>Age: 20 Years <br>From: Colombo, Sri Lanka <br> SA Number: SA24610096 <br> Currently: 2nd Year, 2nd Semester</p>
+                <div class="social-links">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <a href="#toc" class="btn">View Portfolio</a>
+            </div>
+            <div class="image">
+                <div class="profile-photo-container">
+                    <img src="images/main.jpg" alt="Profile Photo" class="profile-photo">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
-        <img src="images/man1.jpg" alt="Haritha Waththegedara">
-      </div>
-    </div>
+    </section>
 
-    <div class="info-sec">
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
-        <h1>2+</h1>
-        <p>Years of <br> Learning Experience</p>
-      </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
-        <h1>5+</h1>
-        <p>Technical <br> Skills</p>
-      </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
-        <h1>10+</h1>
-        <p>Projects <br> Completed</p>
-      </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
-        <h1>5+</h1>
-        <p>Group <br> Collaborations</p>
-      </div>
-    </div>
-  </section>
+ <!-- Table of Contents -->
+    <section id="toc">
+        <h2 data-aos="fade-up">Table of Contents</h2>
+        <div class="toc-grid" data-aos="fade-up" data-aos-delay="200">
+            <div class="toc-item" onclick="scrollToLecture('lecture1')" data-aos="zoom-in">
+                <h3>1. Introduction to Professional Skills</h3>
+                <p>Group dynamics, decision-making, conflict resolution</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture2')" data-aos="zoom-in" data-aos-delay="100">
+                <h3>2. Portfolio Management</h3>
+                <p>Career portfolios, organization, assessment</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture3')" data-aos="zoom-in" data-aos-delay="200">
+                <h3>3. Report & Proposal Writing</h3>
+                <p>Project proposals, external & internal proposals</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture4')" data-aos="zoom-in" data-aos-delay="300">
+                <h3>4. CV and Cover Letter Writing</h3>
+                <p>Resume building, professional applications</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture5')" data-aos="zoom-in" data-aos-delay="400">
+                <h3>5. Interview Skills</h3>
+                <p>Verbal/non-verbal communication, interview preparation</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture6')" data-aos="zoom-in" data-aos-delay="500">
+                <h3>6. Food Fiesta</h3>
+                <p>Marketing, customer relations, business experience</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture7')" data-aos="zoom-in" data-aos-delay="600">
+                <h3>7. Speaking Skills</h3>
+                <p>Meeting types, planning, effective contribution</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture8')" data-aos="zoom-in" data-aos-delay="700">
+                <h3>8. Email Writing</h3>
+                <p>Formal email etiquette, job applications</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture9')" data-aos="zoom-in" data-aos-delay="800">
+                <h3>9. Telephone Etiquette</h3>
+                <p>Professional phone communication, customer service</p>
+            </div>
+            <div class="toc-item" onclick="scrollToLecture('lecture11')" data-aos="zoom-in" data-aos-delay="900">
+                <h3>10. Dining Etiquette</h3>
+                <p>Table manners, social conduct, professional behavior</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Spline viewer (place before the closing </body>) -->
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+    <!-- Lectures Section -->
+    <section id="lectures">
+        <!-- Lecture 1 -->
+        <div class="lecture" id="lecture1" data-aos="fade-up">
+            <div class="lecture-header">
+                <h2 class="lecture-title">1. Introduction to Professional Skills</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this case study we divided into small groups and I was with my friends. I got the decision-making topic. I learned how to respect others' decisions, and how to deal with group members. I improved my conflict resolution, and how to make better decisions. So this is a better experience for me to face real-world workplace challenges. Then I can make myself more effective and versatile.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p>Key aspects of professional skills development through group activities and decision-making exercises.</p>
+                    
+                    <div class="subtopic">
+                        <h3>Worksheets</h3>
+                        <div class="image-grid">
+                            <div class="image-container" onclick="openImageViewer('images/work1.jpeg')">
+                                <img src="images/work1.jpeg" alt="Worksheet 1">
+                                <div class="image-label">Worksheet 1 (Click to view full size)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div class="spline-container" aria-hidden="false">
-  <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
-</div>
+        <!-- Lecture 2 -->
+        <div class="lecture" id="lecture2" data-aos="fade-up" data-aos-delay="100">
+            <div class="lecture-header">
+                <h2 class="lecture-title">2. Portfolio Management</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this module, I learned how portfolios are used in professional and career growth. I gained knowledge of the different types of portfolios I can develop. And I learned an important type of portfolio. That is a career portfolio and I learned more things about career portfolios. And I learned how to organize the portfolio and what is assessment portfolios. This knowledge helps me to show my achievements and qualifications clearly.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>What will a portfolio say about yourself:</strong><br>
+                    ➢ A presentation of yourself<br>
+                    ➢ Organizing yourself<br>
+                    ➢ Finding about yourself</p>
+                    
+                    <p><strong>Different types of portfolios:</strong><br>
+                    • Personal portfolio<br>
+                    • Career/Dossier portfolio<br>
+                    • Employment portfolio<br>
+                    • Assessment portfolio</p>
+                    
+                    <p><strong>Two Types of career Portfolios:</strong><br>
+                    • Master portfolios<br>
+                    • Targeted portfolios</p>
+                    
+                    <p><strong>Organizing the portfolio:</strong><br>
+                    • Cover page<br>
+                    • Table of Contents<br>
+                    • Division</p>
+                    
+                    <p><strong>What is an Assessment Portfolio:</strong><br>
+                    A document to evaluate performance of students</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Lecture 3 -->
+        <div class="lecture" id="lecture3" data-aos="fade-up" data-aos-delay="200">
+            <div class="lecture-header">
+                <h2 class="lecture-title">3. Report Writing & Project Proposal Writing</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this lecture, I learn about the key parts and goals of the project proposals. So a project is a big task that needs careful planning, a lot of time, and effort. I learned two main types of proposals: External Proposals and Internal Proposals.</p>
+                    
+                    <p><strong>External Proposals</strong> mean proposals which seek to secure contracts by offering concise summaries, management specifics, and financial outlines.</p>
+                    
+                    <p><strong>Internal Proposals</strong> mean proposals which seek to secure contracts by offering concise summaries, management specifics, and financial outlines.</p>
+                    
+                    <p>Introduction should include: Purpose, Credibility, Definition of problem, Background of problem, Significance of problem, Solution, Preview of parts or sections of proposal.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>Project Proposal Essentials:</strong><br>
+                    • Clear problem definition<br>
+                    • Proposed solution<br>
+                    • Resource requirements<br>
+                    • Timeline<br>
+                    • Budget details</p>
+                    
+                    <p><strong>Key Sections:</strong><br>
+                    1. Executive Summary<br>
+                    2. Problem Statement<br>
+                    3. Proposed Solution<br>
+                    4. Methodology<br>
+                    5. Budget<br>
+                    6. Timeline<br>
+                    7. Conclusion</p>
+                </div>
+            </div>
+        </div>
 
-<section id="about" class="section">
-    <h2 data-aos="fade-up" data-aos-duration="1000">About Me</h2>
-    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">I am an Information Technology undergraduate at SLIIT City University in Sri Lanka, specializing in full-stack development. With a strong foundation in computer science principles, I am committed to leveraging technology to drive innovation and solve complex problems in dynamic environments.</p>
-    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">My academic journey has equipped me with expertise in key areas including data structures, algorithms, database management systems, and software engineering methodologies. I have hands-on experience with modern web technologies such as HTML5, CSS3, JavaScript (ES6+), React.js, and Node.js, enabling me to build scalable and user-centric applications.</p>
-    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Beyond coursework, I actively participate in collaborative projects, hackathons, and open-source contributions to refine my technical acumen and teamwork skills. My goal is to advance in the IT sector, contributing to cutting-edge solutions that enhance efficiency and user experience in Sri Lanka's evolving digital landscape.</p>
-    <div class="about-details" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-      <ul>
-        <li><strong>Education:</strong> Bachelor's Degree in Information Technology (Ongoing), SLIIT City University, Sri Lanka</li>
-        <li><strong>Professional Experience:</strong> Academic projects and freelance web development assignments</li>
-        <li><strong>Key Skills:</strong> Full-stack development, problem-solving, agile methodologies, version control (Git)</li>
-        <li><strong>Location:</strong> Sri Lanka</li>
-        <li><strong>Professional Goals:</strong> To excel as a full-stack developer, leading innovative projects and mentoring emerging talent in the IT industry.</li>
-      </ul>
-    </div>
-  </section>
+        <!-- Lecture 4 -->
+        <div class="lecture" id="lecture4" data-aos="fade-up" data-aos-delay="300">
+            <div class="lecture-header">
+                <h2 class="lecture-title">4. CV and Cover Letter Writing</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this module, our lecturer taught us about CVs and cover letters. We learned what should be included in the CV, how to make a great CV and the importance of the CV. And also I learned how to write a cover letter. We got some examples of CVs and cover letters.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>CV Essentials:</strong><br>
+                    • Contact Information<br>
+                    • Professional Summary<br>
+                    • Work Experience<br>
+                    • Education<br>
+                    • Skills<br>
+                    • Achievements</p>
+                    
+                    <p><strong>Cover Letter Tips:</strong><br>
+                    • Address specific person<br>
+                    • Mention position applying for<br>
+                    • Highlight relevant experience<br>
+                    • Show enthusiasm<br>
+                    • Professional closing</p>
+                    
+                    <div class="subtopic">
+                        <h3>My CV and Cover Letter</h3>
+                        <div class="image-grid">
+                            <div class="image-container" onclick="openImageViewer('images/CV.png')">
+                                <img src="images/CV.png" alt="CV">
+                                <div class="image-label">My CV (Click to view full size)</div>
+                            </div>
+                            <div class="image-container" onclick="openImageViewer('images/letter.jpeg')">
+                                <img src="images/letter.jpeg" alt="Cover letter">
+                                <div class="image-label">Cover Letter (Click to view full size)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <section id="projects" class="section">
-    <h2 data-aos="fade-up" data-aos-duration="1000">My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
-        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1">
-        <h3>Task Management App</h3>
-        <p>A simple web app built with React and Firebase for managing tasks in real-time, including user authentication and collaboration features. Developed as part of a university assignment.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-      <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
-        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2">
-        <h3>E-commerce Prototype</h3>
-        <p>An e-commerce site prototype using Node.js, Express, and MongoDB, featuring product listings, shopping cart, and basic payment integration simulation. Created for a software engineering course.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-      <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="600">
-        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3">
-        <h3>Personal Portfolio Website</h3>
-        <p>This portfolio site itself, built with HTML, CSS, JavaScript, and AOS for animations. Demonstrates responsive design and basic front-end skills.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-      <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="800">
-        <img src="https://via.placeholder.com/300x200?text=Project+4" alt="Project 4">
-        <h3>Weather Dashboard</h3>
-        <p>A dashboard app using JavaScript and OpenWeather API to display real-time weather data, with charts and location-based forecasts. A personal project to practice API integration.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-      <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="1000">
-        <img src="https://via.placeholder.com/300x200?text=Project+5" alt="Project 5">
-        <h3>Blog Platform</h3>
-        <p>A basic blog system with user registration, post creation, and commenting, built using PHP and MySQL. Developed during an introductory database course.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-    </div>
-  </section>
+        <!-- Lecture 5 -->
+        <div class="lecture" id="lecture5" data-aos="fade-up" data-aos-delay="400">
+            <div class="lecture-header">
+                <h2 class="lecture-title">5. Interview Skills and Formal Letter Writing</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this lecture, I learned about job interviews. I learned to appraise the role of effective verbal and non-verbal communication in job interviews and use a range of verbal and nonverbal communication strategies to face a job interview successfully. I learned how to describe my strengths, education, work experience, and future goals and learned about interview outfits.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p>"Job interviews are scary, even when you've prepared thoroughly. But when you are prepared, you can harness the adrenaline to work for you so that you put your best foot forward and get the job you want." (Locker & Kaczmarek, 2007: 499. Business Communication: Building Critical Skills. Boston: McGraw Hill)</p>
+                    
+                    <div class="subtopic">
+                        <h3>Interview Outfits for Men</h3>
+                        <div class="image-grid">
+                            <div class="image-container" onclick="openImageViewer('images/formal.jpg')">
+                                <img src="images/formal.jpg" alt="formal suit">
+                                <div class="image-label">Formal Attire (Click to view full size)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <section id="skills" class="section">
-    <h2 data-aos="fade-up" data-aos-duration="1000">My Skills</h2>
-    <div class="skills-list">
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-        <p>HTML/CSS</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-        <p>JavaScript</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
-        <p>React.js</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
-        <p>Node.js</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
-        <p>Python</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1200">
-        <p>SQL/Database Management</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
-      </div>
-      <div class="skill" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1400">
-        <p>Version Control (Git)</p>
-        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-      </div>
-    </div>
-  </section>
+        <!-- Lecture 6 -->
+        <div class="lecture" id="lecture6" data-aos="fade-up" data-aos-delay="500">
+            <div class="lecture-header">
+                <h2 class="lecture-title">6. Food Fiesta</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>We organized a food festival on 2025/03/25 at SLIIT CITY UNI ground premises. We had a lot of fun and gained knowledge in marketing (how we deal with customers, how to respect buyers, and how to do a genuine business.) We choose cutlets, sandwiches, mocktails, and cool milo. As Miss Ishara guided us, We made a profit after selling food at the food festival.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p>Key learning points from organizing a food festival event and managing a small business operation.</p>
+                    
+                    <div class="subtopic">
+                        <h3>Food Fiesta Photos</h3>
+                        <div class="image-grid">
+                            <div class="image-container" onclick="openImageViewer('images/food1.jpg')">
+                                <img src="images/food1.jpg" alt="team members">
+                                <div class="image-label">Our Team (Click to view full size)</div>
+                            </div>
+                            <div class="image-container" onclick="openImageViewer('images/food2.jpg')">
+                                <img src="images/food2.jpg" alt="our stole">
+                                <div class="image-label">Our Stall (Click to view full size)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <section id="contact" class="section">
-    <h2 data-aos="fade-up" data-aos-duration="1000">Get in Touch</h2>
-    <form class="contact-form" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+        <!-- Lecture 7 -->
+        <div class="lecture" id="lecture7" data-aos="fade-up" data-aos-delay="600">
+            <div class="lecture-header">
+                <h2 class="lecture-title">7. Speaking Skills - Meetings</h2>
+                <span class="attendance not-attended">Not Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this lesson, I learned about meetings. I learned the different types of meetings and how to plan a meeting. I learned how to prepare before a meeting and what questions to ask, like the purpose, place, and who will attend. I also learned the roles in a meeting like secretary and facilitator. I learned how to contribute in a meeting and how to face problems that can happen. This lesson helped me understand how to be confident and active in meetings.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>What is a meeting?</strong><br>
+                    A meeting is a planned discussion where people talk about important topics, make decisions, and work together to solve problems or plan for the future.</p>
+                    
+                    <p><strong>Types of meetings:</strong><br>
+                    • Chat (informal discussion)<br>
+                    • Brainstorming among colleagues<br>
+                    • Project meeting/team meeting<br>
+                    • Department/departmental meeting<br>
+                    • Meeting with suppliers<br>
+                    • Meeting with a customer<br>
+                    • Board general meeting/AGM<br>
+                    • EGM (extraordinarly general meeting)</p>
+                </div>
+                <a class="btn" href="https://drive.google.com/file/d/1UHBl0lhQpMjE4pCoLMPJ7OCTAgIM2Vag/view?usp=sharing" target="_blank">
+                    View Worksheet
+                </a>
+            </div>
+        </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+        <!-- Lecture 8 -->
+        <div class="lecture" id="lecture8" data-aos="fade-up" data-aos-delay="700">
+            <div class="lecture-header">
+                <h2 class="lecture-title">8. Email Writing</h2>
+                <span class="attendance attended">Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this lesson, I learned about email etiquette. I learned how to write a formal email for a job application. I learned that I should use a proper greeting and a good subject line. I should not use short forms or capital letters. I also learned how to end the email in a polite way and write my full name. This lesson helped me understand how to write a good email when applying for a job.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    
+                    <p><strong>Greetings:</strong><br>
+                    • Dear [Name],<br>
+                    • Hello [Name],<br>
+                    • Good morning/afternoon</p>
+                    
+                    <p><strong>Closings:</strong><br>
+                    • Best regards,<br>
+                    • Kind regards,<br>
+                    • Regards,<br>
+                    • Sincerely,</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lecture 9 -->
+        <div class="lecture" id="lecture9" data-aos="fade-up" data-aos-delay="800">
+            <div class="lecture-header">
+                <h2 class="lecture-title">9. Telephone Etiquette</h2>
+                <span class="attendance not-attended">Not Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>In this lecture, I learned about telephone etiquette and customer service. I learned how to answer the phone politely and introduce myself and my department. I learned to speak clearly and smile while talking. I also learned that I should return calls quickly and help the caller instead of just forwarding the call. I learned how to deal with angry callers in a calm and respectful way. This training helped me understand how to talk on the phone in a professional and helpful manner.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>Telephone Etiquette and Customer Service – Key Points</strong><br>
+                    • Answer Quickly – Pick up the phone within 3 rings.<br>
+                    • Identify Yourself – Say your name and department.<br>
+                    • Speak Politely – Use kind words and a friendly tone.<br>
+                    • Listen Carefully – Show interest and take notes.<br>
+                    • Take Messages Properly – Get names, numbers, and details clearly.<br>
+                    • Return Calls Fast – Call back within one working day.<br>
+                    • Handle Transfers Well – Tell the caller where you're sending them.<br>
+                    • Don't Use Slang – Speak clearly and professionally.<br>
+                    • Ask Before Holding – Always ask before putting someone on hold.<br>
+                    • Help Angry Callers – Stay calm, listen, and be respectful.<br>
+                    • Go the Extra Mile – Do more than expected to help.<br>
+                    • Use People's Names – It makes communication friendlier.<br>
+                    • Always Say Goodbye – End the call politely and clearly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lecture 10 -->
+        <div class="lecture" id="lecture11" data-aos="fade-up" data-aos-delay="900">
+            <div class="lecture-header">
+                <h2 class="lecture-title">10. Dining Etiquette</h2>
+                <span class="attendance not-attended">Not Attended</span>
+            </div>
+            <div class="content-grid">
+                <div class="learned">
+                    <h3>What I Learned</h3>
+                    <p>I learned an understanding of the various facets of etiquette and the need of proper conduct in both social and professional contexts from this presentation. We studied table etiquette, including how to handle bread, use cutlery, utilize napkins, and properly season food with salt and pepper. I was able to learn more about social etiquette from this lecture, including what it is, why it matters, and what it is. I acquired social etiquette from this presentation, including listening, making eye contact, smiling authentically, and maintaining personal grooming.</p>
+                </div>
+                <div class="notes">
+                    <h3>Short Notes</h3>
+                    <p><strong>Key Table Etiquette Rules:</strong><br>
+                    • Napkin on lap when seated<br>
+                    • Start eating when host begins<br>
+                    • Pass food to the right<br>
+                    • Use utensils from outside in<br>
+                    • Elbows off the table<br>
+                    • Chew with mouth closed<br>
+                    • Thank host before leaving</p>
+                    
+                    <div class="subtopic">
+                        <h3>Reference Material</h3>
+                        <div class="image-grid">
+                            <div class="image-container" onclick="openImageViewer('')">
+                                <img src="" alt="Dining">
+                                <div class="image-label">Place Setting (Click to view full size)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>harithawattegedara@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 76 290 7982</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kurunegala, Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 M.C.H. Waththegedara. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
 </body>
 </html>
