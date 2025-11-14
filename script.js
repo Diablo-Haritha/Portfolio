@@ -1,31 +1,38 @@
 // Simple Typewriter Effect
-        const text = "Bsc(Hons) Information Technology";
-        const typewriterElement = document.querySelector('.typewriter-text');
-        let i = 0;
-        function typeWriter() {
-            if (i < text.length) {
-                typewriterElement.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        document.addEventListener('DOMContentLoaded', typeWriter);
+const text = "Bsc(Hons) Information Technology";
+const typewriterElement = document.querySelector('.typewriter-text');
+let i = 0;
+function typeWriter() {
+    if (i < text.length) {
+        typewriterElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+    }
+}
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const dropdown = document.getElementById('dropdown');
-            dropdown.classList.toggle('active');
-        }
+// Mobile Menu Toggle
+function toggleMenu() {
+    const dropdown = document.getElementById('dropdown');
+    dropdown.classList.toggle('active');
+}
 
-        // Scroll to lecture function
-        function scrollToLecture(id) {
-            const element = document.getElementById(id);
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        
-        // Image viewer functions
+// Scroll to lecture function
+function scrollToLecture(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        const navHeight = document.querySelector('nav').offsetHeight || 0;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navHeight;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Image viewer functions
 function openImageViewer(src) {
-    if (!src) return; // Prevent opening viewer with empty src
+    if (!src) return;
     const viewer = document.getElementById('imageViewer');
     const img = document.getElementById('viewedImage');
     if (viewer && img) {
@@ -42,21 +49,31 @@ function closeImageViewer() {
         document.body.style.overflow = '';
     }
 }
-        // Close image viewer
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add smooth scrolling for all links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Typewriter
+    typeWriter();
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const navHeight = document.querySelector('nav').offsetHeight || 0;
+                const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navHeight;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
-            });
-            
-            // Close image viewer
- const closeViewer = document.getElementById('closeViewer');
+            }
+        });
+    });
+
+    // Image viewer setup
+    const closeViewer = document.getElementById('closeViewer');
     const imageViewer = document.getElementById('imageViewer');
     if (closeViewer) {
         closeViewer.addEventListener('click', closeImageViewer);
@@ -68,7 +85,6 @@ function closeImageViewer() {
             }
         });
     }
-
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeImageViewer();
