@@ -483,7 +483,43 @@ nav{
             background: var(--purple);
             transform: rotate(90deg);
         }
+/* Image Viewer Styles */
+.image-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+.image-viewer.active {
+    display: flex;
+}
+
+.viewed-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-viewer:hover {
+    color: #ccc;
+}
         /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.8);

@@ -24,21 +24,24 @@
         }
         
         // Image viewer functions
-        function openImageViewer(src) {
-            const viewer = document.getElementById('imageViewer');
-            const img = document.getElementById('viewedImage');
-            
-            img.src = src;
-            viewer.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeImageViewer() {
-            const viewer = document.getElementById('imageViewer');
-            viewer.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
+function openImageViewer(src) {
+    if (!src) return; // Prevent opening viewer with empty src
+    const viewer = document.getElementById('imageViewer');
+    const img = document.getElementById('viewedImage');
+    if (viewer && img) {
+        img.src = src;
+        viewer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeImageViewer() {
+    const viewer = document.getElementById('imageViewer');
+    if (viewer) {
+        viewer.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
         // Close image viewer
         document.addEventListener('DOMContentLoaded', () => {
             // Add smooth scrolling for all links
@@ -53,17 +56,22 @@
             });
             
             // Close image viewer
-            document.getElementById('closeViewer').addEventListener('click', closeImageViewer);
-            document.getElementById('imageViewer').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeImageViewer();
-                }
-            });
-            
-            // Close with ESC key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeImageViewer();
-                }
-            });
+ const closeViewer = document.getElementById('closeViewer');
+    const imageViewer = document.getElementById('imageViewer');
+    if (closeViewer) {
+        closeViewer.addEventListener('click', closeImageViewer);
+    }
+    if (imageViewer) {
+        imageViewer.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageViewer();
+            }
         });
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeImageViewer();
+        }
+    });
+});
